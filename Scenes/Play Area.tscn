@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Entities/Table.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Materials/Floor.tres" type="Material" id=2]
+[ext_resource path="res://Entities/Paddle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Entities/Ball.tscn" type="PackedScene" id=4]
+
+[node name="Play Area" type="Spatial"]
+script = null
+
+[node name="Table" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.552995, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.941365, 0.337391, 0, -0.337391, 0.941365, 0, 2.533, 5.984 )
+script = null
+
+[node name="Paddle 1" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.115174, 0.0883466, 0.137585, 0.110659, 0.0817776, -0.145145, -0.120372, 0.15971, -0.00178831, 1.26986, 1.04327, 3.74642 )
+
+[node name="Paddle 2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.00276498, 0.122406, 0.158143, 0.160427, -0.0957841, 0.0713342, 0.119397, 0.125866, -0.0995104, -1.28968, 1.04327, -2.58866 )
+
+[node name="Floor" type="CSGBox" parent="."]
+use_collision = true
+width = 25.0
+height = 0.05
+depth = 25.0
+material = ExtResource( 2 )
+script = null
+
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 1.86329, 0 )

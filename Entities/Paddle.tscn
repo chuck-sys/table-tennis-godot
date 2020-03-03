@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Entities/Materials/Paddle Handle.tres" type="Material" id=1]
+
+[node name="Spatial" type="Spatial"]
+script = null
+
+[node name="CSGCylinder" type="CSGCylinder" parent="."]
+use_collision = true
+height = 0.15
+sides = 32
+script = null
+
+[node name="CSGCylinder2" type="CSGCylinder" parent="."]
+transform = Transform( -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, 0, 1, -1.35387, 0, 0 )
+radius = 0.12
+sides = 16
+material = ExtResource( 1 )
+script = null

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Entities/Materials/Table.tres" type="Material" id=1]
+
+[sub_resource type="StandardMaterial3D" id=1]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[node name="Table" type="Spatial"]
+script = null
+
+[node name="Surface" type="CSGBox" parent="."]
+use_collision = true
+width = 2.007
+height = 1.0
+depth = 3.605
+material = ExtResource( 1 )
+script = null
+
+[node name="Net" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.600729, 0 )
+use_collision = true
+width = 2.207
+height = 0.2
+depth = 0.002
+material = SubResource( 1 )
+script = null
